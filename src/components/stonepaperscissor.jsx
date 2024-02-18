@@ -49,19 +49,19 @@ export const Stonepaperscissor = () => {
             setwinner('Wins')
             setplayerwinningcount(playerwinningcount + 1)
             // playerwinningcount++
-            setscorecard(prev => [...prev, { name: 'Player', src: "./src/assets/player.png" }]);
+            setscorecard(prev => [...prev, { name: 'Player', src: "../src/assets/player.png" }]);
         }
         else if (value.id == b.id) {
             setwinner('Draw');
             // setscorecard(prev => [...prev, 'Draw'])
-            setscorecard(prev => [...prev, { name: 'Draw', src: "./src/assets/equal.png" }]);
+            setscorecard(prev => [...prev, { name: 'Draw', src: "../src/assets/equal.png" }]);
 
         }
         else {
             setwinner('Lose')
             setpcomputerwinningcount(computerwinningcount + 1)
             // setscorecard(prev => [...prev, 'Computer'])
-            setscorecard(prev => [...prev, { name: 'Computer', src: "./src/assets/ai.png" }]);
+            setscorecard(prev => [...prev, { name: 'Computer', src: "../src/assets/ai.png" }]);
 
             // computerwinningcount++
 
@@ -131,7 +131,7 @@ export const Stonepaperscissor = () => {
 
                 <div className='clashicon' >
 
-                    <img src={'./src/assets/sword.png'} className="logo react" alt="Vite logo" />
+                    <img src={'.../src/assets/sword.png'} className="logo react" alt="Vite logo" />
                     <div>
 
                         {/* <IconButton  size="large" color="secondary">
