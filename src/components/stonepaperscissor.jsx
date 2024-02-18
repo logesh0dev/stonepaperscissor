@@ -5,14 +5,25 @@ import { IconButton } from '@mui/material';
 import $ from 'jquery';
 import { Celebration } from './celebration';
 
+import rocks from '../assets/stone.png';
+import paper from '../assets/paper.png';
+import scissor from '../assets/scissors.png';
+
+import player from '../assets/player.png';
+import equal from '../assets/equal.png';
+import ai from '../assets/ai.png';
+
+import versus from '../assets/sword.png'
+
+
 
 
 export const Stonepaperscissor = () => {
 
     const options = [
-        { name: 'Stone', id: 1, src: 'src/assets/stone.png' },
-        { name: 'Paper', id: 2, src: 'src/assets/paper.png' },
-        { name: 'Scissor', id: 3, src: 'src/assets/scissors.png' }
+        { name: 'Stone', id: 1, src: rocks },
+        { name: 'Paper', id: 2, src: paper },
+        { name: 'Scissor', id: 3, src: scissor }
     ]
 
     
@@ -53,19 +64,20 @@ export const Stonepaperscissor = () => {
             setwinner('Wins')
             setplayerwinningcount(playerwinningcount + 1)
             // playerwinningcount++
-            setscorecard(prev => [...prev, { name: 'Player', src: "src/assets/player.png" }]);
+            // ..\assets\ 
+            setscorecard(prev => [...prev, { name: 'Player', src: player }]);
         }
         else if (value.id == b.id) {
             setwinner('Draw');
             // setscorecard(prev => [...prev, 'Draw'])
-            setscorecard(prev => [...prev, { name: 'Draw', src: "src/assets/equal.png" }]);
+            setscorecard(prev => [...prev, { name: 'Draw', src: equal }]);
 
         }
         else {
             setwinner('Lose')
             setpcomputerwinningcount(computerwinningcount + 1)
             // setscorecard(prev => [...prev, 'Computer'])
-            setscorecard(prev => [...prev, { name: 'Computer', src: "src/assets/ai.png" }]);
+            setscorecard(prev => [...prev, { name: 'Computer', src: ai }]);
 
             // computerwinningcount++
 
@@ -135,7 +147,7 @@ export const Stonepaperscissor = () => {
 
                 <div className='clashicon' >
 
-                    <img src={'src/assets/sword.png'} className="logo react" alt="Vite logo" />
+                    <img src={versus} className="logo react" alt="Vite logo" />
                     <div>
 
                         {/* <IconButton  size="large" color="secondary">
