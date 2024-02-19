@@ -26,9 +26,6 @@ export const Stonepaperscissor = () => {
         { name: 'Scissor', id: 3, src: scissor }
     ]
 
-    
-    // <img src="../assets/stone" alt="" />
-
     var [opponent, setopponentvalue] = useState(0);
     var [winner, setwinner] = useState('');
     var [count, setCount] = useState(5);
